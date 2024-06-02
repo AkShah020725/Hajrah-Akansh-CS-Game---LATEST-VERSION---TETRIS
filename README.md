@@ -777,5 +777,35 @@ elif event.key == pygame.K_q:
     pygame.quit()
     quit()
 ```
+185. We will now define the game state to its initial state.
+```
+def reset_game(self): #this resets the game state to its initial state
+    self.field = [[0 for y in range(W)] for x in range(H)] #this creates a 2D list representing the game field with their dimensions
+    self.score = 0 #this initalizes the score to zero at the start of the game
+    self.gameover = False #this indicates whether the game is over or not
+    self.current_tile = self.create_tile() #this creates the current tile for the game
+    self.next_tile = self.create_tile() #this creates the next tile for the game
+    self.fall_time = 0 #this initializes the fall time to zero
+    self.start_game = False #this tracks whether the game has started or not
+```
+186. We will now define the create tile as it creates a new tile from the top of the board.
+```
+def create_tile(self): #this creates and returns a new tile at the top of the board
+    return Tile(5, 0, random.randint(0, len(shapes) - 1) % len(shape_colors)) #this returns a new tile with a random shape or object
+```
+187. We will now define the draw grid as it will draw the grid.
+```
+def draw_grid(self): #this draws the grid lines of the game
+    for x in range(W): #this iterates over the width of the grid
+        for y in range(H): #this iterates over the height of the grid
+            rect = pygame.Rect(x * TILE, y * TILE, TILE, TILE) #this creates a rectangle for each tile in the grid
+            pygame.draw.rect(self.screen, (40, 40, 40), rect, 1) #this draws a rectangle on the screen with a boarder color
+```
+
+
+
+
+
+
 
 
