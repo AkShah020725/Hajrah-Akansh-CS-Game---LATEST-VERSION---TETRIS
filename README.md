@@ -1035,7 +1035,7 @@ if __name__ == "__main__": #this checks if the program is being ran by python
     game.main() #this calls the main method of the game
 ```
 
-***How can the user run this program?***
+***How can the user run this program effectively?***
 
 1. Import all of the pygames needed to run this game.
 2. Make a class called the "Class Game" where you could define all of the functions.
