@@ -1,4 +1,4 @@
-***Tetris Game By Hajrah & Akansh***
+***Tetris Game By Akansh***
 
 ***How to write our program?***
 
